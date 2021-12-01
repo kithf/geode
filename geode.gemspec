@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["kithf"]
   spec.email         = ["code@kithf.xyz"]
 
-  spec.summary       = "Lua Package Manager."
-  # spec.description   = "desc"
+  spec.summary       = "Package manager for any project"
+  spec.description   = "desc"
   spec.homepage      = "https://github.com/kithf/geode"
   spec.required_ruby_version = ">= 2.6.0"
 
@@ -36,7 +36,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "git"
   spec.add_dependency "rubyzip"
   spec.add_dependency "rufus-lua"
-  spec.add_dependency "rufus-lua-win", git: "kithf/rufus-lua-win", branch: "x64-patch"
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
@@ -112,4 +111,7 @@ Gem::Specification.new do |spec|
 
   # Platform independent implementation of Unix which command.
   # spec.add_dependency "tty-which", "~> 0.4"
+  spec.metadata = {
+    "rubygems_mfa_required" => "true"
+  }
 end
