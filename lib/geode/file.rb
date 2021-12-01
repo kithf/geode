@@ -10,12 +10,10 @@ OFile = File
 
 def download_method(str)
   case OFile.extname(URI(str).path)
-  when ".git"
+  when ".git", "git"
     "git"
-  when ".zip"
+  when ".zip", "zip"
     "zip"
-  when "git"
-    "git"
   else
     return "git" if str.include?("github") || str.include?("gitlab")
 
@@ -25,7 +23,7 @@ end
 
 module Geode
   module File
-    def self.download(url, file_name = false, **kws)
+    def self.download(url, file_name: false, **kws)
       path = kws.fetch :path, "./"
       ofile = !file_name
       file_name ||= URI(url).path.match(%r{[^/\\]+$}).to_s
