@@ -4,14 +4,12 @@
 /coverage/
 /doc/
 /pkg/
-/spec/reports/
 /tmp/
 
 # rspec failure tracking
 .rspec_status
 
 ###
-/luatest/*
+/luatest/
 /spec/
-/example/
 Gemfile.lock
